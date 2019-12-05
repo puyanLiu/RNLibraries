@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="margin5">5dp</dimen>
-    <dimen name="margin15">15dp</dimen>
-    <dimen name="margin10">10dp</dimen>
-    <dimen name="margin20">20dp</dimen>
-</resources>
