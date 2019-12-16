@@ -1,0 +1,17 @@
+//
+//  release.xcconfig
+//  RNLibraries
+//
+//  Created by liupuyan on 2019/5/13.
+//  Copyright © 2019 Facebook. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-RNLibraries/Pods-RNLibraries.release.xcconfig"
+#include "common.xcconfig"
+
+APP_NAME = 正式版
+CONFIG_PLIST_NAME = release
+CODEPUSH_KEY = eX5YVIIwg13LxQsjDT32WaEOxVuP20786ca0-74ae-4992-8c14-d5763ecdc12f

@@ -1,0 +1,17 @@
+//
+//  debug.xcconfig
+//  RNLibraries
+//
+//  Created by liupuyan on 2019/5/13.
+//  Copyright © 2019 Facebook. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-RNLibraries/Pods-RNLibraries.debug.xcconfig"
+#include "common.xcconfig"
+
+APP_NAME = 开发版
+CONFIG_PLIST_NAME = debug
+CODEPUSH_KEY = 8unMGyc9dRZY-VMaPbJPqAtE6Ob6H1pEhw6sV

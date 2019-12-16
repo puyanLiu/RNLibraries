@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RNLibraries</string>
+    <string name="application_package">com.schoolhub</string>
 </resources>

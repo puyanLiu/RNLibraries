@@ -41,13 +41,3 @@ target 'RNLibraries' do
 
   use_native_modules!
 end
-
-target 'RNLibraries-tvOS' do
-  # Pods for RNLibraries-tvOS
-
-  target 'RNLibraries-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-end

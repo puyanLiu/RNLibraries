@@ -1,0 +1,36 @@
+//
+//  PrefixHeader.pch
+//  RNLibraries
+//
+//  Created by liupuyan on 2019/12/16.
+//  Copyright © 2019 Facebook. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+
+#define iOS10 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0)
+#define iOS9 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
+// Log
+#ifdef DEBUG
+#import "NSString+Extension.h"
+#define RNString [NSString stringWithFormat:@"%s", __FILE__].lastPathComponent
+#define RNLog(...) printf("%s: %s 第%d行-------------------%s\n",[[NSString sh_stringDate] UTF8String] ,[RNString UTF8String], __LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String])
+#define RNLogPoint(point) RNLog(@"%s = { x:%.4f, y:%.4f }", #point, point.x, point.y)
+#define RNLogSize(size)   RNLog(@"%s = { w:%.4f, h:%.4f }", #size, size.width, size.height)
+#define RNLogRect(rect)   RNLog(@"%s = { x:%.4f, y:%.4f, w:%.4f, h:%.4f }", #rect, rect.origin.x, rect.origin.y, rect.size.width, rect.size.height)
+#else
+#define RNLog(...)
+#define RNLogPoint(...)
+#define RNLogSize(...)
+#define RNLogRect(...)
+#endif
+
+#endif
+
+#endif /* PrefixHeader_pch */

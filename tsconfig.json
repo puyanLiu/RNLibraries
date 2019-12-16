@@ -8,7 +8,7 @@
         "noUnusedLocals": true,
         "skipLibCheck": true,
         "jsx": "react-native",
-        "noImplicitAny": true, // 在表达式和声明上有隐含的 any类型时报错
+        "noImplicitAny": false, // 在表达式和声明上有隐含的 any类型时报错
         "experimentalDecorators": true, // 启用实验性的ES装饰器
         "preserveConstEnums": true,
         "allowSyntheticDefaultImports": true,

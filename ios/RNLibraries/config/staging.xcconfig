@@ -1,0 +1,17 @@
+//
+//  staging.xcconfig
+//  RNLibraries
+//
+//  Created by liupuyan on 2019/5/13.
+//  Copyright © 2019 Facebook. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-RNLibraries/Pods-RNLibraries.staging.xcconfig"
+#include "common.xcconfig"
+
+APP_NAME = 测试版
+CONFIG_PLIST_NAME = staging
+CODEPUSH_KEY = chOAPZ8uz5mc-7OgPSBDi--1XGyn20786ca0-74ae-4992-8c14-d5763ecdc12f

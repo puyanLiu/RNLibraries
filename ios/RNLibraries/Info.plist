@@ -53,5 +53,13 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>CodePushDeploymentKey</key>
+	<string>$(CODEPUSH_KEY)</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>icomoon.ttf</string>
+	</array>
+	<key>ConfigPlistName</key>
+	<string>${CONFIG_PLIST_NAME}</string>
 </dict>
 </plist>
