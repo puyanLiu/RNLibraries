@@ -12,6 +12,20 @@ import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
 
+  public static boolean keyboardShowing = false;  // 键盘是否是弹出状态
+  private static MainApplication instance;
+  public static MainApplication getInstance() {
+      if (instance == null) {
+            // 线程安全
+          synchronized (MainApplication.class) {
+              if (instance == null) {
+                  instance = new MainApplication();
+              }
+          }
+      }
+      return instance;
+  }
+
   private final ReactNativeHost mReactNativeHost =
       new ReactNativeHost(this) {
         @Override
@@ -71,4 +85,11 @@ public class MainApplication extends Application implements ReactApplication {
       }
     }
   }
+
+    public static boolean isKeyboardShowing() {
+        return keyboardShowing;
+    }
+    public static void setKeyboardShowing(boolean keyboardShowing) {
+        MainApplication.keyboardShowing = keyboardShowing;
+    }
 }

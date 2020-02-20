@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">RNLibraries</string>
     <string name="application_package">com.schoolhub</string>
+    <string name="reactNativeCodePush_androidDeploymentKey">K_yn32IEAtzVeDCbNt0nUiOcyvYjB1nLgz-hE</string>
 </resources>

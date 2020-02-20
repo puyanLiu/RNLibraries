@@ -124,9 +124,6 @@ const stackRoutes: IRouteMap = {
   },
   homeDetail: {
     screen: HomeDetail,
-    navigationOptions: {
-      title: 'home详情页',
-    },
   },
   billDetail: {
     screen: BillDetail,

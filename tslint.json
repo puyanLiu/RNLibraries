@@ -27,14 +27,15 @@
         "no-object-literal-type-assertion": false,
         "no-implicit-dependencies": false,
         "no-submodule-imports": false,
+        "no-shadowed-variable": false,
         "member-access": false,
         "member-ordering": false,
         "one-line": [
-            true, 
+            true,
             "check-catch",
             "check-else",
             "check-finally",
-            "check-open-brace", 
+            "check-open-brace",
             "check-whitespace"
         ],
         "quotemark": [true, "single", "jsx-double"],

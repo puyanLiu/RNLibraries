@@ -10,15 +10,23 @@ import { segWidth } from 'rn-styles';
 interface IProps extends INormalComponentProps  {
 }
 
+Index.navigationOptions = ({ navigation }: IProps) => {
+  const title = navigation.getParam('title', '跳转');
+  return {
+    title: title,
+  };
+};
+
 function Index(props: IProps) {
+
   const { navigation } = props;
 
   const _changeTitle = () => {
     navigation.setParams({title: '更改标题方式一'});
 
-    navigationHelper.setParams({
-      title: '更改标题方式二',
-    });
+    // navigationHelper.setParams({
+    //   title: '更改标题方式二',
+    // });
   };
 
   backHelper.backHandle(() => {

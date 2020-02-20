@@ -22,9 +22,6 @@ const demoStackRoutes: IRouteMap = {
   },
   jumpDemo: {
     screen: JumpDemo,
-    navigationOptions: {
-      title: '跳转',
-    },
   },
 };
 

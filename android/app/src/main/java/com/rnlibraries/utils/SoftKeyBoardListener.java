@@ -3,7 +3,6 @@ package com.rnlibraries.utils;
 import android.app.Activity;
 import android.graphics.Rect;
 import android.view.View;
-import android.view.ViewTreeObserver;
 
 public class SoftKeyBoardListener {
     private View rootView;
@@ -13,38 +12,35 @@ public class SoftKeyBoardListener {
     public SoftKeyBoardListener(Activity activity) {
         rootView = activity.getWindow().getDecorView();
 
-        rootView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                Rect r = new Rect();
-                rootView.getWindowVisibleDisplayFrame(r);
+        rootView.getViewTreeObserver().addOnGlobalLayoutListener(() -> {
+            Rect r = new Rect();
+            rootView.getWindowVisibleDisplayFrame(r);
 
-                int visibleHeight = r.height();
-                System.out.println("" + visibleHeight);
-                if (rootViewVisibleHeight == 0) {
-                    rootViewVisibleHeight = visibleHeight;
-                    return;
-                }
+            int visibleHeight = r.height();
+            System.out.println("" + visibleHeight);
+            if (rootViewVisibleHeight == 0) {
+                rootViewVisibleHeight = visibleHeight;
+                return;
+            }
 
-                if (rootViewVisibleHeight == visibleHeight) {
-                    return;
-                }
+            if (rootViewVisibleHeight == visibleHeight) {
+                return;
+            }
 
-                if (rootViewVisibleHeight - visibleHeight > 200) {
-                    if (null != onSoftKeyBoardChangeListener) {
-                        onSoftKeyBoardChangeListener.keyBoardShow(rootViewVisibleHeight - visibleHeight);
-                    }
-                    rootViewVisibleHeight = visibleHeight;
-                    return;
+            if (rootViewVisibleHeight - visibleHeight > 200) {
+                if (null != onSoftKeyBoardChangeListener) {
+                    onSoftKeyBoardChangeListener.keyBoardShow(rootViewVisibleHeight - visibleHeight);
                 }
+                rootViewVisibleHeight = visibleHeight;
+                return;
+            }
 
-                if (visibleHeight - rootViewVisibleHeight > 200) {
-                    if (null != onSoftKeyBoardChangeListener) {
-                        onSoftKeyBoardChangeListener.keyBoardHide(visibleHeight - rootViewVisibleHeight);
-                    }
-                    rootViewVisibleHeight = visibleHeight;
-                    return;
+            if (visibleHeight - rootViewVisibleHeight > 200) {
+                if (null != onSoftKeyBoardChangeListener) {
+                    onSoftKeyBoardChangeListener.keyBoardHide(visibleHeight - rootViewVisibleHeight);
                 }
+                rootViewVisibleHeight = visibleHeight;
+                return;
             }
         });
     }
