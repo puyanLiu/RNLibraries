@@ -1,5 +1,5 @@
 import { NavigationRouteConfig } from 'react-navigation';
-import DecoratorDemo from './decoratorDemo';
+import DecoratorDemo from './DecoratorDemo';
 import JumpDemo from './jumpDemo';
 import Demo from './index';
 
